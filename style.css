@@ -1,0 +1,147 @@
+/************ CUSTOM VARIABLES ****************/
+:root {
+    --ff1: 'Open Sans', sans-serif;
+    --ff2: 'Poppins', sans-serif;
+
+    --fw-regular: 400;
+    --fw-mid: 500;
+    --fw-bold: 600;
+
+    --clr-primary-400: hsl(300, 69%, 71%);
+    --clr-primary-500: hsl(257, 40%, 49%);
+
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+}
+
+/********** CSS RESET *************/
+
+/* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin and reset typgraphy syles*/
+* {
+    margin: 0;
+    font: inherit;
+}
+
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/***************** STYLING ******************/
+body {
+    background: url("/images/bg-desktop.svg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: var(--clr-primary-500);
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.nav img {
+    height: 3rem;
+}
+
+.main-section {
+    margin: 4rem 0 2rem;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.content h1 {
+    font-family: var(--ff2);
+    font-size: var(--fs-800);
+    font-weight: var(--fw-bold);
+}
+
+.content p {
+    font-family: var(--ff1);
+    font-size: var(--fs-400);
+    line-height: 1.5;
+}
+
+.content button {
+    font-family: var(--ff2);
+    font-size: var(--fs-400);
+    width: max-content;
+    padding: 1rem 5rem;
+    border: none;
+    background-color: white;
+    color: var(--clr-primary-500);
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 4px 5px 10px hsl(0, 0%, 30%);
+}
+
+.content button:is(:hover, :focus) {
+    background-color: var(--clr-primary-400);
+    color: white;
+    transition: all .3s;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+}
+
+.socials span {
+    padding: .5rem .5rem;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#fb {
+    padding: 0.5rem .7rem;
+}
+
+.socials span:hover {
+    border: 2px solid var(--clr-primary-400);
+    color: var(--clr-primary-400);
+    transition: all .3s;
+}
