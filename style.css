@@ -55,17 +55,18 @@ svg {
 
 /***************** STYLING ******************/
 body {
-    background: url("/images/bg-desktop.svg") no-repeat center center;
+    background: url("/images/bg-desktop.svg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-color: var(--clr-primary-500);
+    min-height: 100vh;
 }
 
 main {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 1300px;
+    margin: 2rem auto 0;
     padding: 2rem;
 }
 
@@ -163,15 +164,6 @@ main {
 }
 
 @media (max-width: 920px) {
-    body {
-        background: url("/images/bg-mobile.svg") no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-color: var(--clr-primary-500);
-    }
-
     main {
         max-width: 800px;
     }
@@ -212,7 +204,12 @@ main {
     }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 380px) {
+    body {
+        background: url("/images/bg-mobile.svg") no-repeat;
+        background-color: var(--clr-primary-500);
+    }
+
     main {
         min-width: 375px;
     }
